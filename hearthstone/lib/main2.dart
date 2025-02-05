@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:flutter/services.dart';
 import 'dart:convert';
 
 void main() => runApp(const NavigationBarApp());
 
 class NavigationBarApp extends StatelessWidget {
-  const NavigationBarApp({super.key});
+  const NavigationBarApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: NavigationExample());
+    return const MaterialApp(home: HomePage());
   }
 }
 
-class NavigationExample extends StatefulWidget {
-  const NavigationExample({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
 
   @override
-  State<NavigationExample> createState() => _NavigationExampleState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _NavigationExampleState extends State<NavigationExample> {
+class _HomePageState extends State<HomePage> {
   int currentPageIndex = 0;
   NavigationDestinationLabelBehavior labelBehavior =
       NavigationDestinationLabelBehavior.alwaysHide;
@@ -34,15 +34,17 @@ class _NavigationExampleState extends State<NavigationExample> {
   }
 
   Future<void> fetchCardUrls() async {
-    // Example URLs, replace with actual API call if needed
-    List<String> urls = List.generate(100, (index) {
-      // Compute a card number between 1 and 10
-      final cardNumber = ((index % 10) + 1).toString().padLeft(3, '0'); // pads numbers less than 10 with a leading zero
-      return 'https://art.hearthstonejson.com/v1/render/latest/frFR/256x/EX1_$cardNumber.png';
-    });
+    // Load the list of image assets from the assets folder
+    final manifestContent = await rootBundle.loadString('AssetManifest.json');
+    final Map<String, dynamic> manifestMap = json.decode(manifestContent);
+
+    // Filter the assets to get only the card images
+    final cardImagePaths = manifestMap.keys
+        .where((String key) => key.contains('images/'))
+        .toList();
 
     setState(() {
-      cardUrls = urls;
+      cardUrls = cardImagePaths;
     });
   }
 
@@ -73,7 +75,7 @@ class _NavigationExampleState extends State<NavigationExample> {
           NavigationDestination(
             selectedIcon: Icon(Icons.favorite),
             icon: Icon(Icons.favorite_border),
-            label: 'favorite',
+            label: 'Favorite',
           ),
           NavigationDestination(
             selectedIcon: Icon(Icons.info),
@@ -94,14 +96,27 @@ class _NavigationExampleState extends State<NavigationExample> {
                 ),
                 itemCount: currentCards.length,
                 itemBuilder: (context, index) {
-                  return Card(
-                    child: Image.network(
-                      currentCards[index],
-                      errorBuilder: (context, error, stackTrace) {
-                        // Optionally, print the error to the console
-                        print('Failed to load image: $error');
-                        return const Icon(Icons.error);
-                      },
+                  return InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => CardDetailPage(
+                            cardImagePath: currentCards[index],
+                          ),
+                        ),
+                      );
+                    },
+                    child: Card(
+                      child: Image.asset(
+                        currentCards[index],
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          // Optionally, print the error to the console
+                          print('Failed to load image: $error');
+                          return const Icon(Icons.error);
+                        },
+                      ),
                     ),
                   );
                 },
@@ -133,6 +148,38 @@ class _NavigationExampleState extends State<NavigationExample> {
                 ),
               ],
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+// New detail page to display card details
+class CardDetailPage extends StatelessWidget {
+  final String cardImagePath;
+
+  const CardDetailPage({Key? key, required this.cardImagePath})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Information de la carte')),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset(
+              cardImagePath,
+              fit: BoxFit.contain,
+              errorBuilder: (context, error, stackTrace) {
+                print('Failed to load image: $error');
+                return const Icon(Icons.error);
+              },
+            ),
+            const SizedBox(height: 16),
+            const Text('Placeholder for card details'),
           ],
         ),
       ),
