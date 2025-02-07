@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
@@ -82,7 +83,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
 
-    Widget page:
+    Widget page;
       switch(selectedIndex) {
         case 0:
           page = HomePage();
@@ -152,9 +153,40 @@ class _HomePageState extends State<HomePage> {
             )
           ],
         ),
-
       )
     );
   }
 }
 
+
+
+class FavouritesPage extends StatefulWidget {
+  const FavouritesPage({super.key});
+
+  @override
+  State<FavouritesPage> createState() => _FavouritesPageState();
+}
+
+class _FavouritesPageState extends State<FavouritesPage> {
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+
+class AboutPage extends StatefulWidget {
+  const AboutPage({super.key});
+
+  @override
+  State<AboutPage> createState() => _AboutPageState();
+}
+
+class _AboutPageState extends State<AboutPage> {
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
+  }
+}
+
+
+*/
