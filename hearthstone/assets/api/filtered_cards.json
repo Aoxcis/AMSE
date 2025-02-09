@@ -1,0 +1,496 @@
+[
+    {
+        "artist": "Erik Ko",
+        "attack": 1,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 1,
+        "dbfId": 1655,
+        "flavor": "Petite mais costaude !",
+        "health": 2,
+        "id": "EX1_001",
+        "mechanics": [
+            "TRIGGER_VISUAL"
+        ],
+        "name": "Gardelumière",
+        "rarity": "RARE",
+        "set": "EXPERT1",
+        "text": "Chaque fois qu’un personnage est soigné, gagne +2 ATQ.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Alex Horley Orlandelli",
+        "attack": 4,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 4,
+        "dbfId": 1656,
+        "elite": true,
+        "flavor": "Le roi-liche l’a envoyé interrompre le tournoi d’Argent. Mais on peut dire que ça a été un échec cuisant.",
+        "health": 4,
+        "id": "EX1_002",
+        "mechanics": [
+            "BATTLECRY"
+        ],
+        "name": "Le Chevalier noir",
+        "race": "UNDEAD",
+        "races": [
+            "UNDEAD"
+        ],
+        "rarity": "LEGENDARY",
+        "referencedTags": [
+            "TAUNT"
+        ],
+        "set": "EXPERT1",
+        "targetingArrowText": "Détruit un serviteur avec Provocation.",
+        "text": "<b>Cri de guerre :</b> détruit un serviteur adverse avec <b>Provocation</b>.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Vance Kovacs",
+        "attack": 2,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 1,
+        "dbfId": 1634,
+        "flavor": "Elle a hâte d’apprendre Mot de pouvoir : Robustesse II.",
+        "health": 1,
+        "id": "EX1_004",
+        "mechanics": [
+            "TRIGGER_VISUAL"
+        ],
+        "name": "Jeune prêtresse",
+        "rarity": "RARE",
+        "set": "EXPERT1",
+        "text": "À la fin de votre tour, donne +1 PV à un autre serviteur allié aléatoire.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Chris Seaman",
+        "attack": 4,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 4,
+        "dbfId": 1657,
+        "flavor": "Les simples diablosaures ne l’excitent même plus. Bientôt, il voudra attraper Onyxia avec une lame de Krol émoussée.",
+        "health": 2,
+        "id": "EX1_005",
+        "mechanics": [
+            "BATTLECRY"
+        ],
+        "name": "Chasseur de gros gibier",
+        "rarity": "EPIC",
+        "set": "EXPERT1",
+        "targetingArrowText": "Détruit un serviteur avec 7 Attaque ou plus.",
+        "text": "<b>Cri de guerre :</b> détruit un serviteur avec 7 Attaque ou plus.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Sean O’Daniels",
+        "attack": 0,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 3,
+        "dbfId": 1658,
+        "flavor": "ALERTE. ALERTE. ALERTE.",
+        "health": 3,
+        "id": "EX1_006",
+        "mechanics": [
+            "TRIGGER_VISUAL"
+        ],
+        "name": "Robot d’alarme",
+        "race": "MECHANICAL",
+        "races": [
+            "MECHANICAL"
+        ],
+        "rarity": "RARE",
+        "set": "EXPERT1",
+        "text": "Au début de votre tour, échange ce serviteur avec un autre choisi au hasard dans votre main.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Dave Kendall",
+        "attack": 1,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 3,
+        "dbfId": 1659,
+        "flavor": "Quand il était plus jeune, il voulait devenir acolyte de la joie, mais on ne fait pas toujours ce qu’on veut, dans la vie.",
+        "health": 4,
+        "id": "EX1_007",
+        "mechanics": [
+            "TRIGGER_VISUAL"
+        ],
+        "name": "Acolyte de la souffrance",
+        "rarity": "COMMON",
+        "set": "EXPERT1",
+        "text": "Vous piochez une carte chaque fois que ce serviteur subit des dégâts.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Zoltan & Gabor",
+        "attack": 1,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 1,
+        "dbfId": 757,
+        "faction": "ALLIANCE",
+        "flavor": "« Je jure solennellement de faire respecter la Lumière, de purger le monde de ses ténèbres et de manger au moins 5 fruits et légumes par jour._» - Serment de l’Aube d’argent",
+        "health": 1,
+        "id": "EX1_008",
+        "mechanics": [
+            "DIVINE_SHIELD"
+        ],
+        "name": "Écuyère d’Argent",
+        "rarity": "COMMON",
+        "set": "EXPERT1",
+        "text": "<b>Bouclier divin</b>",
+        "type": "MINION"
+    },
+    {
+        "artist": "Mike Sass",
+        "attack": 1,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 1,
+        "dbfId": 1688,
+        "flavor": "Tais-toi, tais-toi, tais-toi, la patte de poulet furieux satan hérétique !!!",
+        "health": 1,
+        "id": "EX1_009",
+        "mechanics": [
+            "ENRAGED"
+        ],
+        "name": "Poulet furieux",
+        "race": "BEAST",
+        "races": [
+            "BEAST"
+        ],
+        "rarity": "RARE",
+        "set": "EXPERT1",
+        "text": "A +5 ATQ s’il est blessé.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Raymond Swanland",
+        "attack": 2,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 1,
+        "dbfId": 994,
+        "faction": "ALLIANCE",
+        "flavor": "Si vous ne voulez pas que des worgens vous infiltrent, vous n’avez qu’à crier : « Non ! Méchant loup ! »",
+        "health": 1,
+        "id": "EX1_010",
+        "mechanics": [
+            "STEALTH"
+        ],
+        "name": "Infiltrateur worgen",
+        "rarity": "COMMON",
+        "set": "EXPERT1",
+        "text": "<b>Camouflage</b>",
+        "type": "MINION"
+    },
+    {
+        "artist": "Karl Richardson",
+        "attack": 2,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 1,
+        "dbfId": 132,
+        "faction": "HORDE",
+        "flavor": "Le vaudou est un art souvent incompris. Mais c’est un <i>art</i>.",
+        "health": 1,
+        "id": "EX1_011",
+        "mechanics": [
+            "BATTLECRY"
+        ],
+        "name": "Docteur vaudou",
+        "rarity": "FREE",
+        "set": "LEGACY",
+        "targetingArrowText": "Rend 2 points de vie.",
+        "text": "<b>Cri de guerre :</b> rend #2 PV.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Alex Horley Orlandelli",
+        "attack": 1,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 2,
+        "dbfId": 749,
+        "elite": true,
+        "flavor": "Il est en charge de la campagne annuelle de don du sang du monastère Écarlate.",
+        "health": 1,
+        "id": "EX1_012",
+        "mechanics": [
+            "DEATHRATTLE",
+            "SPELLPOWER"
+        ],
+        "name": "Mage de sang Thalnos",
+        "race": "UNDEAD",
+        "races": [
+            "UNDEAD"
+        ],
+        "rarity": "LEGENDARY",
+        "set": "EXPERT1",
+        "spellDamage": 1,
+        "text": "<b>Dégâts des sorts : +1</b>.\n<b>Râle d’agonie :</b> vous piochez une carte.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Sunny Gho",
+        "attack": 5,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 3,
+        "dbfId": 1693,
+        "elite": true,
+        "flavor": "Le roi Mukla s’est rendu sur l’île aux Jagueros pour trouver l’amour.",
+        "health": 5,
+        "id": "EX1_014",
+        "mechanics": [
+            "BATTLECRY"
+        ],
+        "name": "Roi Mukla",
+        "race": "BEAST",
+        "races": [
+            "BEAST"
+        ],
+        "rarity": "LEGENDARY",
+        "set": "EXPERT1",
+        "text": "<b>Cri de guerre :</b> donne 2 bananes à votre adversaire.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Karl Richardson",
+        "attack": 1,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 2,
+        "dbfId": 284,
+        "faction": "ALLIANCE",
+        "flavor": "« Seulement la moitié des étudiants obtiendra son diplôme… les autres auront été transformés en poulet avant la fin de l’année. » - Maître-bricoleur Suprétincelle, professeur du cours de bidules pour débutant.",
+        "health": 1,
+        "id": "EX1_015",
+        "mechanics": [
+            "BATTLECRY"
+        ],
+        "name": "Ingénieur novice",
+        "rarity": "FREE",
+        "set": "LEGACY",
+        "text": "<b>Cri de guerre :</b> vous piochez une carte.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Glenn Rane",
+        "attack": 5,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 6,
+        "dbfId": 1721,
+        "elite": true,
+        "flavor": "Sylvanas a été transformée en reine banshee par Arthas, mais il aurait sans doute dû la tuer parce que ça n’a fait que l’énerver.",
+        "health": 5,
+        "id": "EX1_016",
+        "mechanics": [
+            "DEATHRATTLE"
+        ],
+        "name": "Sylvanas Coursevent",
+        "race": "UNDEAD",
+        "races": [
+            "UNDEAD"
+        ],
+        "rarity": "LEGENDARY",
+        "set": "EXPERT1",
+        "text": "<b>Râle d’agonie :</b> prend le contrôle d’un serviteur adverse aléatoire.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Jaemin Kim",
+        "attack": 4,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 3,
+        "dbfId": 921,
+        "faction": "HORDE",
+        "flavor": "Strangleronce est un endroit magnifique où partir en vacances, mais vous ne voudriez pas y vivre.",
+        "health": 2,
+        "id": "EX1_017",
+        "mechanics": [
+            "STEALTH"
+        ],
+        "name": "Panthère de la jungle",
+        "race": "BEAST",
+        "races": [
+            "BEAST"
+        ],
+        "rarity": "COMMON",
+        "set": "EXPERT1",
+        "text": "<b>Camouflage</b>",
+        "type": "MINION"
+    },
+    {
+        "artist": "Doug Alexander",
+        "attack": 3,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 3,
+        "dbfId": 608,
+        "flavor": "Elle a toujours sur elle une flasque de boisson énergétique du Puits de soleil !",
+        "health": 2,
+        "id": "EX1_019",
+        "mechanics": [
+            "BATTLECRY"
+        ],
+        "name": "Clerc du Soleil brisé",
+        "rarity": "FREE",
+        "set": "LEGACY",
+        "targetingArrowText": "Donne_+1/+1.",
+        "text": "<b>Cri de guerre :</b> donne +1/+1 à un serviteur allié.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Gonzalo Ordonez",
+        "attack": 3,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 3,
+        "dbfId": 642,
+        "faction": "ALLIANCE",
+        "flavor": "La croisée écarlate prend soin du linge que vous aimez.",
+        "health": 1,
+        "id": "EX1_020",
+        "mechanics": [
+            "DIVINE_SHIELD"
+        ],
+        "name": "Croisée écarlate",
+        "rarity": "COMMON",
+        "set": "EXPERT1",
+        "text": "<b>Bouclier divin</b>",
+        "type": "MINION"
+    },
+    {
+        "artist": "Efrem Palacios",
+        "attack": 2,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 3,
+        "dbfId": 765,
+        "faction": "HORDE",
+        "flavor": "Il est en poste dans la péninsule des Flammes infernales, mais il espère être réaffecté plus près d’Orgrimmar, ou à tout autre endroit qui ne soit pas en feu.",
+        "health": 3,
+        "id": "EX1_021",
+        "mechanics": [
+            "WINDFURY"
+        ],
+        "name": "Long-voyant de Thrallmar",
+        "rarity": "COMMON",
+        "set": "EXPERT1",
+        "text": "<b>Furie des vents</b>",
+        "type": "MINION"
+    },
+    {
+        "artist": "Phroilan Gardner",
+        "attack": 3,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 4,
+        "dbfId": 34,
+        "faction": "HORDE",
+        "flavor": "La première fois qu’il a protégé Lune-d’Argent contre le Fléau, ça ne s’est pas très bien passé…",
+        "health": 3,
+        "id": "EX1_023",
+        "mechanics": [
+            "DIVINE_SHIELD"
+        ],
+        "name": "Garde de Lune-d’argent",
+        "rarity": "COMMON",
+        "set": "EXPERT1",
+        "text": "<b>Bouclier divin</b>",
+        "type": "MINION"
+    },
+    {
+        "artist": "Warren Mahy",
+        "attack": 2,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 4,
+        "dbfId": 523,
+        "faction": "ALLIANCE",
+        "flavor": "Son projet en cours prévoit l’installation d’un lance-missile sur Mordicator.",
+        "health": 4,
+        "id": "EX1_025",
+        "mechanics": [
+            "BATTLECRY"
+        ],
+        "name": "Mécano de petit dragon",
+        "rarity": "FREE",
+        "set": "LEGACY",
+        "text": "<b>Cri de guerre :</b> invoque un petit dragon mécanique 2/1.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Alex Horley Orlandelli",
+        "attack": 5,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 5,
+        "dbfId": 68,
+        "faction": "ALLIANCE",
+        "flavor": "Quand on parle du tigre, le tigre apparaît… Euh, non c’est pas ça.",
+        "health": 5,
+        "id": "EX1_028",
+        "mechanics": [
+            "STEALTH"
+        ],
+        "name": "Tigre de Strangleronce",
+        "race": "BEAST",
+        "races": [
+            "BEAST"
+        ],
+        "rarity": "COMMON",
+        "set": "EXPERT1",
+        "text": "<b>Camouflage</b>",
+        "type": "MINION"
+    },
+    {
+        "artist": "Glenn Rane",
+        "attack": 2,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 1,
+        "dbfId": 658,
+        "flavor": "Tout ce qu’il veut, c’est se faire des amis, mais ces rejets constants commencent à l’énerver.",
+        "health": 1,
+        "id": "EX1_029",
+        "mechanics": [
+            "DEATHRATTLE"
+        ],
+        "name": "Gnome lépreux",
+        "rarity": "COMMON",
+        "set": "EXPERT1",
+        "text": "<b>Râle d’agonie :</b> inflige 2 points de dégâts au héros adverse.",
+        "type": "MINION"
+    },
+    {
+        "artist": "Andrea Uderzo",
+        "attack": 4,
+        "cardClass": "NEUTRAL",
+        "collectible": true,
+        "cost": 6,
+        "dbfId": 759,
+        "faction": "ALLIANCE",
+        "flavor": "Elle ne marche pas VRAIMENT sur le soleil, c’est juste un nom. Ne vous inquiétez pas !",
+        "health": 5,
+        "id": "EX1_032",
+        "mechanics": [
+            "DIVINE_SHIELD",
+            "TAUNT"
+        ],
+        "name": "Marche-soleil",
+        "rarity": "RARE",
+        "set": "EXPERT1",
+        "text": "<b>Provocation</b>\n<b>Bouclier divin</b>",
+        "type": "MINION"
+    }
+]
