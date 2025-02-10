@@ -1,10 +1,12 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'dart:developer';
 
 class DetailsPage extends StatelessWidget {
   final String cardImagePath;
   final String cardId;
+
 
   const DetailsPage({
     Key? key,
@@ -13,14 +15,21 @@ class DetailsPage extends StatelessWidget {
   }) : super(key: key);
 
   Future<Map<String, dynamic>> fetchCardDetails() async {
+    var newCardId = '';
     final String response = await rootBundle.loadString('api/filtered_cards.json');
     final List<dynamic> jsonResponse = jsonDecode(response);
 
+    // Log the jsonResponse and cardId for debugging
+    //log('jsonResponse: $jsonResponse');
+    log('cardId: $cardId');
+    newCardId = cardId.substring(0, cardId.length - 4);
+
     // Find the card matching the cardId
     final dynamic cardData = jsonResponse.firstWhere(
-          (card) => card['id'] == cardId,
+          (card) => card['id'] == newCardId,
       orElse: () => {},
     );
+    log('cardData: $cardData');
 
     // Convert the found map into a Map<String, dynamic>
     return Map<String, dynamic>.from(cardData);
@@ -31,8 +40,7 @@ class DetailsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('Card Information')),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+        child: ListView(
           children: [
             Image.asset(
               cardImagePath,
@@ -42,7 +50,7 @@ class DetailsPage extends StatelessWidget {
                 return const Icon(Icons.error);
               },
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 8),
             FutureBuilder<Map<String, dynamic>>(
               future: fetchCardDetails(),
               builder: (context, snapshot) {
@@ -54,7 +62,57 @@ class DetailsPage extends StatelessWidget {
                   return const Text('No card details available');
                 } else {
                   final cardDetails = snapshot.data!;
-                  return Text(cardDetails['name'] ?? 'Unknown card');
+                  return Container(
+                    padding: const EdgeInsets.all(16),
+                    child: Column(
+                      children: [
+                        Text(
+                          cardDetails['name'],
+                          style: const TextStyle(
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 8),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Text(
+                              cardDetails['flavor'],
+                              style: const TextStyle(fontSize: 16),
+                              textAlign: TextAlign.left,
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              'Collectable : ${cardDetails['collectible']}',
+                              style: const TextStyle(fontSize: 16),
+                              textAlign: TextAlign.left,
+                            ),
+                            const SizedBox(height: 8),
+                            Text(
+                              'rarity : ${cardDetails['rarity']}',
+                              style: const TextStyle(fontSize: 16),
+                              textAlign: TextAlign.left,
+                            ),
+                            const SizedBox(height: 8),
+                            if (cardDetails['faction'] != null)
+                              Text(
+                                'Faction : ${cardDetails['faction']}',
+                                style: const TextStyle(fontSize: 16),
+                                textAlign: TextAlign.left,
+                              ),
+                            if (cardDetails['faction'] == null)
+                              Text(
+                                'Pas de Faction',
+                                style: const TextStyle(fontSize: 16),
+                                textAlign: TextAlign.left,
+                              ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  );
+
                 }
               },
             ),

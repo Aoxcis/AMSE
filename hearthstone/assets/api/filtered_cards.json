@@ -43,7 +43,7 @@
         ],
         "set": "EXPERT1",
         "targetingArrowText": "Détruit un serviteur avec Provocation.",
-        "text": "<b>Cri de guerre :</b> détruit un serviteur adverse avec <b>Provocation</b>.",
+        "text": "Cri de guerre : détruit un serviteur adverse avec Provocation.",
         "type": "MINION"
     },
     {
@@ -82,7 +82,7 @@
         "rarity": "EPIC",
         "set": "EXPERT1",
         "targetingArrowText": "Détruit un serviteur avec 7 Attaque ou plus.",
-        "text": "<b>Cri de guerre :</b> détruit un serviteur avec 7 Attaque ou plus.",
+        "text": "Cri de guerre : détruit un serviteur avec 7 Attaque ou plus.",
         "type": "MINION"
     },
     {
@@ -144,7 +144,7 @@
         "name": "Écuyère d’Argent",
         "rarity": "COMMON",
         "set": "EXPERT1",
-        "text": "<b>Bouclier divin</b>",
+        "text": "Bouclier divin",
         "type": "MINION"
     },
     {
@@ -187,7 +187,7 @@
         "name": "Infiltrateur worgen",
         "rarity": "COMMON",
         "set": "EXPERT1",
-        "text": "<b>Camouflage</b>",
+        "text": "Camouflage",
         "type": "MINION"
     },
     {
@@ -198,7 +198,7 @@
         "cost": 1,
         "dbfId": 132,
         "faction": "HORDE",
-        "flavor": "Le vaudou est un art souvent incompris. Mais c’est un <i>art</i>.",
+        "flavor": "Le vaudou est un art souvent incompris. Mais c’est un art.",
         "health": 1,
         "id": "EX1_011",
         "mechanics": [
@@ -208,7 +208,7 @@
         "rarity": "FREE",
         "set": "LEGACY",
         "targetingArrowText": "Rend 2 points de vie.",
-        "text": "<b>Cri de guerre :</b> rend #2 PV.",
+        "text": "Cri de guerre : rend #2 PV.",
         "type": "MINION"
     },
     {
@@ -234,7 +234,7 @@
         "rarity": "LEGENDARY",
         "set": "EXPERT1",
         "spellDamage": 1,
-        "text": "<b>Dégâts des sorts : +1</b>.\n<b>Râle d’agonie :</b> vous piochez une carte.",
+        "text": "Dégâts des sorts : +1.\nRâle d’agonie : vous piochez une carte.",
         "type": "MINION"
     },
     {
@@ -258,7 +258,7 @@
         ],
         "rarity": "LEGENDARY",
         "set": "EXPERT1",
-        "text": "<b>Cri de guerre :</b> donne 2 bananes à votre adversaire.",
+        "text": "Cri de guerre : donne 2 bananes à votre adversaire.",
         "type": "MINION"
     },
     {
@@ -278,7 +278,7 @@
         "name": "Ingénieur novice",
         "rarity": "FREE",
         "set": "LEGACY",
-        "text": "<b>Cri de guerre :</b> vous piochez une carte.",
+        "text": "Cri de guerre : vous piochez une carte.",
         "type": "MINION"
     },
     {
@@ -302,7 +302,7 @@
         ],
         "rarity": "LEGENDARY",
         "set": "EXPERT1",
-        "text": "<b>Râle d’agonie :</b> prend le contrôle d’un serviteur adverse aléatoire.",
+        "text": "Râle d’agonie : prend le contrôle d’un serviteur adverse aléatoire.",
         "type": "MINION"
     },
     {
@@ -326,7 +326,7 @@
         ],
         "rarity": "COMMON",
         "set": "EXPERT1",
-        "text": "<b>Camouflage</b>",
+        "text": "Camouflage",
         "type": "MINION"
     },
     {
@@ -346,7 +346,7 @@
         "rarity": "FREE",
         "set": "LEGACY",
         "targetingArrowText": "Donne_+1/+1.",
-        "text": "<b>Cri de guerre :</b> donne +1/+1 à un serviteur allié.",
+        "text": "Cri de guerre : donne +1/+1 à un serviteur allié.",
         "type": "MINION"
     },
     {
@@ -366,7 +366,7 @@
         "name": "Croisée écarlate",
         "rarity": "COMMON",
         "set": "EXPERT1",
-        "text": "<b>Bouclier divin</b>",
+        "text": "Bouclier divin",
         "type": "MINION"
     },
     {
@@ -386,7 +386,7 @@
         "name": "Long-voyant de Thrallmar",
         "rarity": "COMMON",
         "set": "EXPERT1",
-        "text": "<b>Furie des vents</b>",
+        "text": "Furie des vents",
         "type": "MINION"
     },
     {
@@ -406,7 +406,7 @@
         "name": "Garde de Lune-d’argent",
         "rarity": "COMMON",
         "set": "EXPERT1",
-        "text": "<b>Bouclier divin</b>",
+        "text": "Bouclier divin",
         "type": "MINION"
     },
     {
@@ -426,7 +426,7 @@
         "name": "Mécano de petit dragon",
         "rarity": "FREE",
         "set": "LEGACY",
-        "text": "<b>Cri de guerre :</b> invoque un petit dragon mécanique 2/1.",
+        "text": "Cri de guerre : invoque un petit dragon mécanique 2/1.",
         "type": "MINION"
     },
     {
@@ -450,7 +450,7 @@
         ],
         "rarity": "COMMON",
         "set": "EXPERT1",
-        "text": "<b>Camouflage</b>",
+        "text": "Camouflage",
         "type": "MINION"
     },
     {
@@ -469,7 +469,7 @@
         "name": "Gnome lépreux",
         "rarity": "COMMON",
         "set": "EXPERT1",
-        "text": "<b>Râle d’agonie :</b> inflige 2 points de dégâts au héros adverse.",
+        "text": "Râle d’agonie : inflige 2 points de dégâts au héros adverse.",
         "type": "MINION"
     },
     {
@@ -490,7 +490,7 @@
         "name": "Marche-soleil",
         "rarity": "RARE",
         "set": "EXPERT1",
-        "text": "<b>Provocation</b>\n<b>Bouclier divin</b>",
+        "text": "Provocation\nBouclier divin",
         "type": "MINION"
     }
 ]
