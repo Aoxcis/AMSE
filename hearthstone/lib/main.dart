@@ -17,8 +17,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Hearthstone',
-        debugShowCheckedModeBanner: false,
+      title: 'Hearthstone',
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
       routes: {
         '/home': (context) => HomePage(),

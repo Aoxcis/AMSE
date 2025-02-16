@@ -53,10 +53,22 @@ class _HomePageState extends State<HomePage> {
       bottomNavigationBar: NavigationBar(
         labelBehavior: labelBehavior,
         selectedIndex: currentPageIndex,
+        animationDuration: const Duration(milliseconds: 1),
         onDestinationSelected: (int index) {
           setState(() {
             currentPageIndex = index;
           });
+          switch (index) {
+            case 0:
+              Navigator.pushNamed(context, '/home');
+              break;
+            case 1:
+              Navigator.pushNamed(context, '/favorites');
+              break;
+            case 2:
+              Navigator.pushNamed(context, '/info');
+              break;
+          }
         },
         destinations: const <Widget>[
           NavigationDestination(

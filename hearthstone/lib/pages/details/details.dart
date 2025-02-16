@@ -2,13 +2,16 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:developer';
+import 'package:hearthstone/services/favorites_manager.dart';
+
+import '../../services/favorites_manager.dart';
 
 class DetailsPage extends StatelessWidget {
   final String cardImagePath;
   final String cardId;
 
 
-  const DetailsPage({
+  DetailsPage({
     Key? key,
     required this.cardImagePath,
     required this.cardId,
@@ -35,10 +38,22 @@ class DetailsPage extends StatelessWidget {
     return Map<String, dynamic>.from(cardData);
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Card Information')),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          FavoritesManager.addFavorite(cardImagePath);
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Added to favorites!')),
+          );
+        },
+        child: FavoritesManager().isFavorite(cardImagePath)
+            ? const Icon(Icons.favorite)
+            : const Icon(Icons.favorite_border),
+      ),
       body: Center(
         child: ListView(
           children: [
