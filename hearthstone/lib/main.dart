@@ -6,6 +6,8 @@ import 'package:hearthstone/pages/home/home.dart';
 import 'package:hearthstone/pages/details/details.dart';
 import 'package:hearthstone/pages/info/InfoPage.dart';
 import 'package:hearthstone/pages/favorites/FavoritesPage.dart';
+import 'package:hearthstone/services/no_transitions_builder.dart';
+import 'package:hearthstone/services/no_transition_navigator_observer.dart';
 
 
 
@@ -19,12 +21,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Hearthstone',
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      theme: ThemeData(
+        pageTransitionsTheme: PageTransitionsTheme(
+          builders: {
+            TargetPlatform.android: NoTransitionsBuilder(),
+            TargetPlatform.iOS: NoTransitionsBuilder(),
+          },
+        ),
+      ),
+      navigatorObservers: [NoTransitionNavigatorObserver()],
+      home: const HomePage(),
       routes: {
-        '/home': (context) => HomePage(),
-        '/info': (context) => InfoPage(),
-        '/favorites': (context) => FavoritesPage(),
-        '/details': (context) => DetailsPage(cardImagePath: '',cardId: '',),
+        '/home': (context) => const HomePage(),
+        '/info': (context) => const InfoPage(),
+        '/favorites': (context) => const FavoritesPage(),
+        '/details': (context) => DetailsPage(cardImagePath: '', cardId: ''),
       },
     );
   }

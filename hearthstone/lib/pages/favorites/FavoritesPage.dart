@@ -19,47 +19,51 @@ class _FavoritesPageState extends State<FavoritesPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: NavigationBar(
-        labelBehavior: labelBehavior,
         selectedIndex: currentPageIndex,
-        animationDuration: const Duration(milliseconds: 1),
+        animationDuration: Duration.zero, // Remove nav bar animation
         onDestinationSelected: (int index) {
           setState(() {
             currentPageIndex = index;
           });
           switch (index) {
             case 0:
-              Navigator.pushNamed(context, '/home');
+              Navigator.pushReplacementNamed(context, '/home');
               break;
             case 1:
-              Navigator.pushNamed(context, '/favorites');
+              Navigator.pushReplacementNamed(context, '/favorites');
               break;
             case 2:
-              Navigator.pushNamed(context, '/info');
+              Navigator.pushReplacementNamed(context, '/info');
               break;
           }
         },
-        destinations: const <Widget>[
+        destinations: const <NavigationDestination>[
           NavigationDestination(
-            selectedIcon: Icon(Icons.home),
             icon: Icon(Icons.home_outlined),
+            selectedIcon: Icon(Icons.home),
             label: 'Home',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.favorite),
             icon: Icon(Icons.favorite_border),
+            selectedIcon: Icon(Icons.favorite),
             label: 'Favorite',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.info),
             icon: Icon(Icons.info_outline),
+            selectedIcon: Icon(Icons.info),
             label: 'Info',
           ),
         ],
       ),
+      appBar: AppBar(
+        title: const Text('Hearthstone Info'),
+        backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.3),
+        automaticallyImplyLeading: false,
+      ),
 
       body: Center(
         child: favorites.isEmpty
-            ? const Text('No favorites yet.')
+            ? const Text('Pas encore de favoris')
             : GridView.builder(
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,

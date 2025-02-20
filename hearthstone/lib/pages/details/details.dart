@@ -42,7 +42,10 @@ class DetailsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Card Information')),
+      appBar: AppBar(
+        title: const Text('Card Information'),
+        backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.3),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           FavoritesManager.addFavorite(cardImagePath);
