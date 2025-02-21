@@ -13,127 +13,120 @@ class _InfoPageState extends State<InfoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: currentPageIndex,
-        animationDuration: Duration.zero, // Remove nav bar animation
-        onDestinationSelected: (int index) {
-          setState(() {
-            currentPageIndex = index;
-          });
-          switch (index) {
-            case 0:
-              Navigator.pushReplacementNamed(context, '/home');
-              break;
-            case 1:
-              Navigator.pushReplacementNamed(context, '/favorites');
-              break;
-            case 2:
-              Navigator.pushReplacementNamed(context, '/info');
-              break;
-          }
-        },
-        destinations: const <NavigationDestination>[
-          NavigationDestination(
-            icon: Icon(Icons.home_outlined),
-            selectedIcon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.favorite_border),
-            selectedIcon: Icon(Icons.favorite),
-            label: 'Favorite',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.info_outline),
-            selectedIcon: Icon(Icons.info),
-            label: 'Info',
-          ),
-        ],
-      ),
-
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        title: const Text('Hearthstone Info'),
-        backgroundColor: Theme.of(context).colorScheme.primary.withOpacity(0.3),
-        automaticallyImplyLeading: false,
+        title: const Text('Hearthstone Info', style: TextStyle(fontWeight: FontWeight.bold)),
+        centerTitle: true,
+        elevation: 4,
       ),
-
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'About',
-                style: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Card(
+          elevation: 4,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          child: Padding(
+            padding: const EdgeInsets.all(24.0),
+            child: ListView(
+              shrinkWrap: true,
+              children: [
+                Text(
+                  'About',
+                  style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
                 ),
-              ),
-              Text(
-                'Cette application rassemble des cartes de Hearthstone et donne des informations sur les cartes.',
-                style: const TextStyle(
-                  fontSize: 18,
+                const SizedBox(height: 16),
+                Text(
+                  'Cette application rassemble des cartes de Hearthstone et donne des informations sur les cartes.',
+                  style: Theme.of(context).textTheme.bodyLarge,
+                  textAlign: TextAlign.center,
                 ),
-              ),
-              const SizedBox(height: 16),
-              Text(
-                'Developed by',
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+                const Divider(height: 32),
+                Text(
+                  'Developed by',
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
                 ),
-              ),
-              Text(
-                'Grégoire Paul',
-                style: const TextStyle(
-                  fontSize: 18,
+                Text(
+                  'Grégoire Paul',
+                  style: Theme.of(context).textTheme.bodyLarge,
+                  textAlign: TextAlign.center,
                 ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                'Contact',
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+                const SizedBox(height: 16),
+                Text(
+                  'Contact',
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
                 ),
-              ),
-              Text(
-                'gregoire.paul@etu.imt-nord-europe.fr',
-                style: const TextStyle(
-                  fontSize: 18,
+                Text(
+                  'gregoire.paul@etu.imt-nord-europe.fr',
+                  style: Theme.of(context).textTheme.bodyLarge,
+                  textAlign: TextAlign.center,
                 ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                'Source Code',
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+                const SizedBox(height: 16),
+                Text(
+                  'Source Code',
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
                 ),
-              ),
-              Text(
-                'https://github.com/Aoxcis/AMSE.git',
-                style: const TextStyle(
-                  fontSize: 18,
+                Text(
+                  'https://github.com/Aoxcis/AMSE.git',
+                  style: Theme.of(context).textTheme.bodyLarge,
+                  textAlign: TextAlign.center,
                 ),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                'Copyright',
-                style: const TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+                const SizedBox(height: 16),
+                Text(
+                  'Copyright',
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
                 ),
-              ),
-              Text(
-                'Cette application utilise des données et images provenant de l\'API HearthstoneJSON.',
-                style: const TextStyle(
-                  fontSize: 18,
+                Text(
+                  'Cette application utilise des données et images provenant de l\'API HearthstoneJSON.',
+                  style: Theme.of(context).textTheme.bodyLarge,
+                  textAlign: TextAlign.center,
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: NavigationBar(
+          selectedIndex: currentPageIndex,
+          animationDuration: Duration.zero,
+          onDestinationSelected: (int index) {
+            setState(() {
+              currentPageIndex = index;
+            });
+            switch (index) {
+              case 0:
+                Navigator.pushReplacementNamed(context, '/home');
+                break;
+              case 1:
+                Navigator.pushReplacementNamed(context, '/favorites');
+                break;
+              case 2:
+                Navigator.pushReplacementNamed(context, '/info');
+                break;
+            }
+          },
+          destinations: const <NavigationDestination>[
+            NavigationDestination(
+              icon: Icon(Icons.home_outlined),
+              selectedIcon: Icon(Icons.home),
+              label: 'Home',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.favorite_border),
+              selectedIcon: Icon(Icons.favorite),
+              label: 'Favorite',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.info_outline),
+              selectedIcon: Icon(Icons.info),
+              label: 'Info',
+            ),
+          ],
         ),
       ),
     );
