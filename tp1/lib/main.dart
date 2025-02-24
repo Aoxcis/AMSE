@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 
-import 'package:hearthstone/pages/home/home.dart';
-import 'package:hearthstone/pages/details/details.dart';
-import 'package:hearthstone/pages/info/InfoPage.dart';
-import 'package:hearthstone/pages/favorites/FavoritesPage.dart';
-import 'package:hearthstone/services/no_transitions_builder.dart';
-import 'package:hearthstone/services/no_transition_navigator_observer.dart';
+import 'package:tp1/pages/home/home.dart';
+import 'package:tp1/pages/details/details.dart';
+import 'package:tp1/pages/info/InfoPage.dart';
+import 'package:tp1/pages/favorites/FavoritesPage.dart';
+import 'package:tp1/services/no_transitions_builder.dart';
+import 'package:tp1/services/no_transition_navigator_observer.dart';
 
 
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Hearthstone',
+      title: 'Hearthstone Info',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         pageTransitionsTheme: PageTransitionsTheme(

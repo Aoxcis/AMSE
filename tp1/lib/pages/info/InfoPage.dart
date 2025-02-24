@@ -30,19 +30,19 @@ class _InfoPageState extends State<InfoPage> {
               shrinkWrap: true,
               children: [
                 Text(
-                  'About',
+                  'À propos',
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  'Cette application rassemble des cartes de Hearthstone et donne des informations sur les cartes.',
+                  'Cette application rassemble des cartes de Hearthstone et donne des informations sur celles ci.',
                   style: Theme.of(context).textTheme.bodyLarge,
                   textAlign: TextAlign.center,
                 ),
                 const Divider(height: 32),
                 Text(
-                  'Developed by',
+                  'Développé par',
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
@@ -64,7 +64,7 @@ class _InfoPageState extends State<InfoPage> {
                 ),
                 const SizedBox(height: 16),
                 Text(
-                  'Source Code',
+                  'Code Source',
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                   textAlign: TextAlign.center,
                 ),
@@ -80,7 +80,7 @@ class _InfoPageState extends State<InfoPage> {
                   textAlign: TextAlign.center,
                 ),
                 Text(
-                  'Cette application utilise des données et images provenant de l\'API HearthstoneJSON.',
+                  'Cette application utilise des données et images provenant de l\'API HearthstoneJSON.\n Les données et images sont  © Blizzard Entertainment.- tous droits réservés. Cette application n\'est pas affiliée à Blizzard Entertainment.',
                   style: Theme.of(context).textTheme.bodyLarge,
                   textAlign: TextAlign.center,
                 ),
@@ -119,7 +119,7 @@ class _InfoPageState extends State<InfoPage> {
             NavigationDestination(
               icon: Icon(Icons.favorite_border),
               selectedIcon: Icon(Icons.favorite),
-              label: 'Favorite',
+              label: 'Favoris',
             ),
             NavigationDestination(
               icon: Icon(Icons.info_outline),

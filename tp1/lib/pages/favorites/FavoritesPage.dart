@@ -92,7 +92,7 @@ class _FavoritesPageState extends State<FavoritesPage> {
             NavigationDestination(
               icon: Icon(Icons.favorite_border),
               selectedIcon: Icon(Icons.favorite),
-              label: 'Favorite',
+              label: 'Favoris',
             ),
             NavigationDestination(
               icon: Icon(Icons.info_outline),
