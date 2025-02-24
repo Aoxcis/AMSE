@@ -1,3 +1,3 @@
 # Hearthsone info
 
-See the Info Page for more information about the app
+Voir le ReadMe à la racine du repo
